@@ -23,15 +23,16 @@ app = FastAPI()
 
 format = "%Y-%m-%d %H:%M:%S %Z%z"
 
-origins = ["http://127.0.0.1:8000", 
-           "https://simple-smart-hub-client.netlify.app",
-           "http://192.168.102.46:8000",
-          "http://127.0.0.1:5500/index.html",
-          "https://test-8gc8.onrender.com"]
+#origins = ["http://127.0.0.1:8000", 
+#           "https://simple-smart-hub-client.netlify.app",
+#           "http://192.168.102.46:8000",
+#          "http://127.0.0.1:5500/index.html",
+#          "https://test-8gc8.onrender.com"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+#    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
